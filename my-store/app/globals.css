@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f9f6f0;
+  --foreground: #281d15;
+  --card: #ffffff;
+  --card-foreground: #281d15;
+  --primary: #ef6306;
+  --primary-hover: #d95705;
+  --primary-foreground: #f9f6f0;
+  --secondary: #ede8de;
+  --secondary-foreground: #281d15;
+  --accent: #f9b11f;
+  --accent-foreground: #281d15;
+  --muted: #847062;
+  --border: rgb(40 29 21 / 12%);
+  --input: rgb(40 29 21 / 12%);
+  --ring: #ef6306;
+  --destructive: #c32222;
+  --destructive-foreground: #f9f6f0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-playfair-display);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-playfair-display), Georgia, "Times New Roman", serif;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+  }
+}
