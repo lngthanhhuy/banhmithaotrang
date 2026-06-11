@@ -1,10 +1,24 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import {
+  Be_Vietnam_Pro,
+  Freeman,
+  Playfair_Display,
+} from "next/font/google";
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const beVietnamPro = Be_Vietnam_Pro({
+  variable: "--font-be-vietnam-pro",
   subsets: ["latin", "vietnamese"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const freeman = Freeman({
+  variable: "--font-freeman",
+  subsets: ["latin", "vietnamese"],
+  weight: "400",
   display: "swap",
 });
 
@@ -38,9 +52,11 @@ export default function RootLayout({
   return (
     <html lang="vi" className="h-full">
       <body
-        className={`${inter.variable} ${playfairDisplay.variable} flex min-h-full flex-col antialiased`}
+        className={`${beVietnamPro.variable} ${freeman.variable} ${playfairDisplay.variable} flex min-h-full flex-col antialiased`}
       >
-        {children}
+        <Header />
+        <div className="flex flex-1 flex-col">{children}</div>
+        <Footer />
       </body>
     </html>
   );

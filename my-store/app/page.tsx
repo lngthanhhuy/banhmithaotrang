@@ -1,9 +1,8 @@
 const Home = () => {
-  console.log('Hi');
   return (
     <main>
       <div>
-        <p>Hello</p>
+        <p>Trang chủ</p>
       </div>
     </main>
   );

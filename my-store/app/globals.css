@@ -38,7 +38,8 @@
   --color-ring: var(--ring);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-be-vietnam-pro);
+  --font-nav: var(--font-freeman);
   --font-display: var(--font-playfair-display);
 }
 
@@ -54,7 +55,7 @@
   body {
     background-color: var(--background);
     color: var(--foreground);
-    font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+    font-family: var(--font-be-vietnam-pro), Arial, Helvetica, sans-serif;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
   }
@@ -87,4 +88,147 @@
     outline: 2px solid var(--ring);
     outline-offset: 3px;
   }
+}
+
+@layer components {
+  .nav-link {
+    font-family: var(--font-freeman), Arial, Helvetica, sans-serif;
+    letter-spacing: 0.035em;
+    text-shadow:
+      0 1px 0 rgb(255 255 255 / 75%),
+      0 3px 10px rgb(40 29 21 / 18%);
+  }
+
+  .nav-link:hover {
+    text-shadow:
+      0 1px 0 rgb(255 255 255 / 80%),
+      0 4px 12px rgb(239 99 6 / 28%);
+  }
+
+  .copyright-dough {
+    isolation: isolate;
+    box-shadow: 0 -12px 30px rgb(239 99 6 / 10%);
+  }
+
+  .footer-flour-dust {
+    background-image:
+      radial-gradient(
+        circle at 4% 14%,
+        rgb(249 246 240 / 38%) 0 1px,
+        transparent 2px
+      ),
+      radial-gradient(
+        circle at 9% 63%,
+        rgb(249 246 240 / 23%) 0 2.5px,
+        transparent 4px
+      ),
+      radial-gradient(
+        circle at 15% 31%,
+        rgb(249 177 31 / 34%) 0 1.5px,
+        transparent 3px
+      ),
+      radial-gradient(
+        circle at 22% 82%,
+        rgb(249 246 240 / 30%) 0 3px,
+        transparent 5px
+      ),
+      radial-gradient(
+        circle at 29% 9%,
+        rgb(249 246 240 / 25%) 0 1px,
+        transparent 2.5px
+      ),
+      radial-gradient(
+        circle at 34% 57%,
+        rgb(249 246 240 / 32%) 0 2px,
+        transparent 3.5px
+      ),
+      radial-gradient(
+        circle at 41% 24%,
+        rgb(249 177 31 / 30%) 0 3.5px,
+        transparent 6px
+      ),
+      radial-gradient(
+        circle at 47% 91%,
+        rgb(249 246 240 / 21%) 0 1.5px,
+        transparent 3px
+      ),
+      radial-gradient(
+        circle at 53% 43%,
+        rgb(249 246 240 / 29%) 0 2.5px,
+        transparent 4.5px
+      ),
+      radial-gradient(
+        circle at 59% 11%,
+        rgb(249 246 240 / 20%) 0 1px,
+        transparent 2px
+      ),
+      radial-gradient(
+        circle at 66% 76%,
+        rgb(249 177 31 / 32%) 0 2px,
+        transparent 4px
+      ),
+      radial-gradient(
+        circle at 71% 35%,
+        rgb(249 246 240 / 34%) 0 3px,
+        transparent 5px
+      ),
+      radial-gradient(
+        circle at 78% 89%,
+        rgb(249 246 240 / 24%) 0 1.5px,
+        transparent 3px
+      ),
+      radial-gradient(
+        circle at 84% 17%,
+        rgb(249 246 240 / 28%) 0 2px,
+        transparent 3.5px
+      ),
+      radial-gradient(
+        circle at 89% 58%,
+        rgb(249 177 31 / 31%) 0 4px,
+        transparent 7px
+      ),
+      radial-gradient(
+        circle at 96% 29%,
+        rgb(249 246 240 / 22%) 0 1px,
+        transparent 2.5px
+      );
+    background-repeat: no-repeat;
+    mask-image: linear-gradient(
+      to bottom,
+      rgb(0 0 0 / 90%),
+      rgb(0 0 0 / 58%) 58%,
+      rgb(0 0 0 / 20%) 100%
+    );
+    opacity: 0.72;
+  }
+
+  .footer-dough-ring {
+    position: absolute;
+    border: 1px solid rgb(249 246 240 / 12%);
+    border-radius: 48% 52% 58% 42% / 42% 38% 62% 58%;
+    background: radial-gradient(
+      circle at 38% 35%,
+      rgb(249 177 31 / 12%),
+      rgb(249 246 240 / 4%) 46%,
+      transparent 72%
+    );
+    filter: blur(0.2px);
+  }
+
+  .footer-dough-ring-left {
+    top: -7rem;
+    left: -9rem;
+    width: 25rem;
+    height: 18rem;
+    transform: rotate(14deg);
+  }
+
+  .footer-dough-ring-right {
+    right: -8rem;
+    bottom: -10rem;
+    width: 29rem;
+    height: 20rem;
+    transform: rotate(-11deg);
+  }
+
 }
