@@ -1,10 +1,5 @@
-const Home = () => {
-  return (
-    <main>
-      <div>
-        <p>Trang chủ</p>
-      </div>
-    </main>
-  );
+import HomeExperience from "@/components/home/home-experience";
+
+export default function Home() {
+  return <HomeExperience />;
 }
-export default Home
